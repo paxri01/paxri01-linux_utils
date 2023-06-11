@@ -1,0 +1,7 @@
+#!/bin/bash
+
+gnome-terminal -t 'push' --hide-menubar -- \
+  /bin/bash -c "{
+    ~/.local/bin/push \"$1\"
+  }"
+
