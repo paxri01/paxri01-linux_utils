@@ -21,7 +21,7 @@ if (( check > 0 )); then
   grep "$bookName" /var/log/ccab/uploaded.log | awk '/\[.*\]/ { print $1 }'
   echo -e "Continue? [y] \c"
   read -r ANS
-  ANS=${ANS:-'y'}
+  ANS=${ANS:-'n'}
   if [[ $ANS != y ]]; then
     echo "Aborting upload."
     exit 0
