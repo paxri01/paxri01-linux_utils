@@ -19,7 +19,7 @@ check=$(grep -c "$bookName" /var/log/ccab/uploaded.log)
 if (( check > 0 )); then
   echo "This book has already been uploaded:"
   grep "$bookName" /var/log/ccab/uploaded.log | awk '/\[.*\]/ { print $1 }'
-  echo -e "Continue? [y] \c"
+  echo -e "Continue? [n] \c"
   read -r ANS
   ANS=${ANS:-'n'}
   if [[ $ANS != y ]]; then
